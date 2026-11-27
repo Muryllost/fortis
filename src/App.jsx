@@ -101,7 +101,29 @@ function App() {
       </section>
 
       <section id="solucoes" className="services-section section-pad"><div className="container"><div className="section-heading"><Reveal><SectionLabel>02 — SERVIÇOS E ESPECIALIDADES</SectionLabel><h2>Soluções técnicas para<br/><span>uma operação mais segura.</span></h2></Reveal><Reveal delay={.12}><p>Da avaliação de riscos à organização documental e capacitação das equipes, as frentes de atuação são definidas conforme a necessidade de cada empresa.</p></Reveal></div>
-        <div className="service-grid service-grid-v2">{services.map((s,i)=>{const Icon=s.icon;return <Reveal delay={(i%3)*.06} key={s.n}><article className="service-card"><div className="card-top"><span>{s.n} / 10</span><Icon size={23}/></div><h3>{s.title}</h3><p>{s.desc}</p><div className="tag-row">{s.tags.map(t=><span key={t}>{t}</span>)}</div><a href="#contato" aria-label={`Solicitar orçamento para ${s.title}`}><ArrowUpRight/></a></article></Reveal>)}</div>
+        <div className="service-grid service-grid-v2">
+  {services.map((s,i)=>{
+    const Icon=s.icon;
+    return (
+      <Reveal delay={(i%3)*.06} key={s.n}>
+        <article className="service-card">
+          <div className="card-top">
+            <span>{s.n} / 10</span>
+            <Icon size={23}/>
+          </div>
+          <h3>{s.title}</h3>
+          <p>{s.desc}</p>
+          <div className="tag-row">
+            {s.tags.map(t=><span key={t}>{t}</span>)}
+          </div>
+          <a href="#contato" aria-label={`Solicitar orçamento para ${s.title}`}>
+            <ArrowUpRight/>
+          </a>
+        </article>
+      </Reveal>
+    );
+  })}
+</div>
       </div></section>
 
       <section className="statement-section"><div className="statement-bg"/><div className="container statement-content"><Reveal><SectionLabel>PREVENÇÃO É ESTRATÉGIA</SectionLabel><h2>O risco não espera.<br/><span>A prevenção também não.</span></h2><p>Transforme segurança em parte da rotina, das decisões e do crescimento da sua operação.</p><a className="button button-lime" href="#contato">Solicitar uma avaliação <ArrowUpRight size={18}/></a></Reveal><div className="statement-stamp"><ShieldCheck size={48}/><span>PROTEGER<br/>É AVANÇAR</span></div></div></section>
