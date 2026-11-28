@@ -15,8 +15,8 @@ const services = [
   { n: '01', icon: ShieldCheck, title: 'Consultoria e assessoria em SST e SSMA', desc: 'Diagnóstico da operação, definição de prioridades, planos de ação e acompanhamento das rotinas de segurança.', tags: ['Diagnóstico', 'Prevenção', 'Acompanhamento'] },
   { n: '02', icon: Activity, title: 'Gestão de riscos ocupacionais', desc: 'Identificação de perigos, avaliação de riscos e medidas de controle para máquinas, equipamentos e atividades críticas.', tags: ['Inventário de riscos', 'LOTO', 'Planos de ação'] },
   { n: '03', icon: Search, title: 'Inspeções e auditorias', desc: 'Verificações em campo e análise documental de proteções de máquinas, EPIs, EPCs, procedimentos e registros.', tags: ['Inspeção em campo', 'Relatório fotográfico', 'Auditoria'] },
-  { n: '04', icon: FileCheck2, title: 'Documentação de SST', desc: 'Elaboração e revisão de documentos e registros conforme a atividade, o porte e as necessidades da operação.', tags: ['PGR', 'PGRTR', 'POPs e Ordens de Serviço'] },
-  { n: '05', icon: HeartPulse, title: 'Saúde ocupacional', desc: 'Apoio na elaboração do PCMSO com médico responsável, organização de exames, controle de vencimentos e gestão de ASOs.', tags: ['PCMSO', 'Exames ocupacionais', 'ASOs'] },
+  { n: '04', icon: FileCheck2, title: 'Documentação de SST', desc: 'Elaboração e revisão de PGR, LTCAT e demais documentos técnicos de Segurança e Saúde do Trabalho.', tags: ['PGR', 'LTCAT', 'PGRTR', 'POPs e Ordens de Serviço'] },
+  { n: '05', icon: HeartPulse, title: 'Saúde ocupacional', desc: 'Organização e encaminhamento de exames ocupacionais, apoio ao PCMSO e gestão dos Atestados de Saúde Ocupacional (ASOs).', tags: ['Exames ocupacionais', 'PCMSO', 'ASOs'] },
   { n: '06', icon: GraduationCap, title: 'Treinamentos e integração', desc: 'Capacitação de equipes operacionais e lideranças, com conteúdo adaptado à atividade e prática quando aplicável.', tags: ['Normas Regulamentadoras', 'Integração', 'Treinamentos personalizados'] },
   { n: '07', icon: Flame, title: 'Prevenção de incêndios e emergências', desc: 'Apoio à regularização de AVCB e CLCB, brigadas, Plano de Atendimento a Emergências e simulados.', tags: ['AVCB e CLCB', 'Brigada', 'PAE e simulados'] },
   { n: '08', icon: ClipboardList, title: 'DDS e comunicação de segurança', desc: 'Desenvolvimento de diálogos diários, campanhas, materiais de integração, orientações e sinalização interna.', tags: ['DDS', 'Campanhas', 'Integração'] },
@@ -25,17 +25,27 @@ const services = [
 ]
 
 const trainings = [
-  ['NR-01', 'Integração de segurança e riscos ocupacionais'],
+  ['NR-01', 'Gerenciamento de riscos ocupacionais'],
   ['NR-06', 'Uso, conservação e responsabilidades sobre EPIs'],
   ['NR-10', 'Segurança em serviços com eletricidade'],
-  ['NR-11', 'Operação segura de empilhadeiras'],
+  ['NR-11', 'Transporte, movimentação e operação de materiais'],
   ['NR-12', 'Segurança em máquinas e equipamentos'],
-  ['NR-20', 'Inflamáveis e combustíveis'],
+  ['NR-18', 'Segurança e saúde no trabalho na indústria da construção'],
+  ['NR-20', 'Segurança com inflamáveis e combustíveis'],
   ['NR-23', 'Prevenção e proteção contra incêndios'],
   ['NR-33', 'Segurança em espaços confinados'],
+  ['NR-34', 'Segurança na indústria da construção, reparação e desmonte naval'],
   ['NR-35', 'Segurança no trabalho em altura'],
 ]
-const extras = ['LOTO', 'Brigada de emergência', 'Primeiros socorros', 'Uso de extintores', 'Treinamentos personalizados']
+const extras = [
+  'Treinamento de operação de empilhadeira',
+  'Treinamento de operação de PEMT',
+  'LOTO',
+  'Brigada de emergência',
+  'Primeiros socorros',
+  'Uso de extintores',
+  'Treinamentos personalizados'
+]
 const segments = [
   ['Indústrias', Factory], ['Transportadoras e logística', BriefcaseBusiness], ['Construção civil', HardHat],
   ['Comércio e restaurantes', Building2], ['Prestadores de serviços', Users]
@@ -49,8 +59,11 @@ const steps = [
 const faqs = [
   ['Quais empresas a FORTIS atende?', 'O portfólio contempla pequenas e médias empresas, indústrias, transportadoras, operações logísticas, comércios, restaurantes, construção civil e prestadores de serviços.'],
   ['Quais cidades a FORTIS atende?', 'A base de atendimento é Bebedouro/SP e região. Consulte a equipe para confirmar a disponibilidade na sua cidade.'],
-  ['Quais treinamentos estão disponíveis?', 'O portfólio apresenta NR-01, NR-06, NR-10, NR-11, NR-12, NR-20, NR-23, NR-33 e NR-35, além de LOTO, brigada, primeiros socorros, uso de extintores e treinamentos personalizados.'],
-  ['A FORTIS elabora documentos como PGR e PGRTR?', 'O escopo apresentado inclui elaboração e revisão de PGR, PGRTR, inventário de riscos, planos de ação, Ordens de Serviço, POPs, fichas de EPI e outros documentos de SST.'],
+ ['Quais treinamentos estão disponíveis?', 'A FORTIS oferece treinamentos das NRs NR-01, NR-06, NR-10, NR-11, NR-12, NR-18, NR-20, NR-23, NR-33, NR-34 e NR-35, além de operação de empilhadeiras, PEMT, LOTO, brigada de emergência e primeiros socorros.'],
+
+['A FORTIS elabora PGR e LTCAT?', 'Sim. Entre os serviços apresentados estão a elaboração e revisão de PGR, LTCAT, PGRTR, inventário de riscos, planos de ação, Ordens de Serviço, POPs e outros documentos de SST.'],
+
+['A FORTIS oferece exames ocupacionais?', 'A empresa oferece suporte relacionado à saúde ocupacional, incluindo exames ocupacionais, PCMSO e ASOs, conforme o escopo de atendimento.'],
   ['Como funciona a contratação?', 'A empresa informa sua cidade, atividade, quantidade de colaboradores e necessidade. A FORTIS avalia a demanda e prepara uma proposta com escopo, prazos e investimento.'],
   ['É possível solicitar uma visita técnica?', 'O atendimento presencial contempla visitas técnicas, inspeções em campo, treinamentos práticos, formação de brigada, simulados e levantamentos no local, conforme a proposta.'],
   ['Como solicito um orçamento?', 'Preencha o formulário com os dados da empresa e a necessidade. A solicitação será preparada para envio por e-mail. O WhatsApp poderá ser ativado após confirmação do número oficial.'],
@@ -101,29 +114,7 @@ function App() {
       </section>
 
       <section id="solucoes" className="services-section section-pad"><div className="container"><div className="section-heading"><Reveal><SectionLabel>02 — SERVIÇOS E ESPECIALIDADES</SectionLabel><h2>Soluções técnicas para<br/><span>uma operação mais segura.</span></h2></Reveal><Reveal delay={.12}><p>Da avaliação de riscos à organização documental e capacitação das equipes, as frentes de atuação são definidas conforme a necessidade de cada empresa.</p></Reveal></div>
-        <div className="service-grid service-grid-v2">
-  {services.map((s,i)=>{
-    const Icon=s.icon;
-    return (
-      <Reveal delay={(i%3)*.06} key={s.n}>
-        <article className="service-card">
-          <div className="card-top">
-            <span>{s.n} / 10</span>
-            <Icon size={23}/>
-          </div>
-          <h3>{s.title}</h3>
-          <p>{s.desc}</p>
-          <div className="tag-row">
-            {s.tags.map(t=><span key={t}>{t}</span>)}
-          </div>
-          <a href="#contato" aria-label={`Solicitar orçamento para ${s.title}`}>
-            <ArrowUpRight/>
-          </a>
-        </article>
-      </Reveal>
-    );
-  })}
-</div>
+        <div className="service-grid service-grid-v2">{services.map((s,i)=>{const Icon=s.icon;return <Reveal delay={(i%3)*.06} key={s.n}><article className="service-card"><div className="card-top"><span>{s.n} / 10</span><Icon size={23}/></div><h3>{s.title}</h3><p>{s.desc}</p><div className="tag-row">{s.tags.map(t=><span key={t}>{t}</span>)}</div><a href="#contato" aria-label={`Solicitar orçamento para ${s.title}`}><ArrowUpRight/></a></article></Reveal>})}</div>
       </div></section>
 
       <section className="statement-section"><div className="statement-bg"/><div className="container statement-content"><Reveal><SectionLabel>PREVENÇÃO É ESTRATÉGIA</SectionLabel><h2>O risco não espera.<br/><span>A prevenção também não.</span></h2><p>Transforme segurança em parte da rotina, das decisões e do crescimento da sua operação.</p><a className="button button-lime" href="#contato">Solicitar uma avaliação <ArrowUpRight size={18}/></a></Reveal><div className="statement-stamp"><ShieldCheck size={48}/><span>PROTEGER<br/>É AVANÇAR</span></div></div></section>
